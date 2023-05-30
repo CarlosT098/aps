@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <math.h> 
 int main(){
-    int cont=0;
-    int idade_em_dias;
-    float a, b, c, delta;
-    float salario;
-    int num;
-    float valores[6]; 
-    int i, contador = 0; 
-    float soma = 0;
+    int cont=0, num, idade_em_dias, i, contador = 0; 
+    float a, b, c, delta,salario,valores[6], soma = 0;
+    //menu de escolha 
     while (cont!=6){    
         printf("\nDigite o numero de acordo com as opcoes:\n");
         printf("para ver o exercicio 1 digite o numero 1\n");
@@ -18,6 +13,7 @@ int main(){
         printf("para ver o exercicoi 5 digite o numero 5\n");
         printf("para sair do programa digite o numero 6\n");
         scanf("%d", &cont);
+        //confirmar se o valor de entrada é valida
         if(cont>0 && cont<7){
             switch(cont){
             //exercicio 1
@@ -109,12 +105,13 @@ int main(){
             printf("%.1f a media é :,\n", soma / contador);
             break;          
             }
-            printf("Espero que tenha gostado do programa. Volte sempre =)");
+            
         }
         else{
-            printf("digite um numero valido");
+            printf("\nDigite um numero valido!\n");
             getchar();
         }
         
     }
+    printf("Espero que tenha gostado do programa. Volte sempre =)");
 }
